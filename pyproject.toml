@@ -1,0 +1,19 @@
+[project]
+name = "functionalcurves"
+version = "0.1.0"
+description = "Simulating dependent (mixing) time series and estimating Tukey's halfspace depth"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "statsmodels",
+    "tqdm",
+]
+
+[tool.setuptools.packages.find]
+include = ["functionalcurves*"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
