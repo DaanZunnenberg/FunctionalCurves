@@ -15,8 +15,9 @@ FunctionalCurves/
 │   ├── example_var1.ipynb          # Demo: VAR(1) process + empirical depth estimation & convergence
 │   ├── example_polynomial.ipynb    # Demo: MixingLinearModel process + Gaussian analytic depth comparison
 │   └── scratch_interactive.ipynb   # Scratch/interactive notebook, mostly duplicated commented-out code
-└── scripts/
-    └── donsker_cdf_scratch.py      # Scratch script: empirical CDF convergence (Donsker) plots
+├── scripts/
+│   └── donsker_cdf_scratch.py      # Scratch script: empirical CDF convergence (Donsker) plots
+└── tests/                          # pytest unit tests for the package's public functions
 ```
 
 ## Modules
@@ -62,6 +63,23 @@ Standalone scratch script unrelated to the depth machinery: plots the empirical 
 
 ```bash
 pip install -e .
+```
+
+For running the test suite, install the dev extra instead:
+
+```bash
+pip install -e ".[dev]"
+```
+
+## Testing
+
+Focused unit tests for the core public functions (`rad`, `GaussianDepth`,
+`Analytic_Depth`, `Estimator` in `depth.py`; the transition functions,
+`MixingMarkovModel`, and `MixingLinearModel` in `mixing_models.py`) live in
+`tests/`. Run them with:
+
+```bash
+pytest
 ```
 
 ## Usage
