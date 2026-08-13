@@ -2,12 +2,14 @@
 
 Research code for simulating dependent (mixing) time series and estimating **Tukey's halfspace depth** and the associated minimal direction at a point, both empirically (via simulation) and analytically (for Gaussian / VAR(1) processes). Used to study how fast empirical depth/direction estimates converge to their theoretical values as sample size grows.
 
+This is research/exploration code, not a published package. `pyproject.toml` exists only to make `functionalcurves` importable in an editable local install and to run the test suite — there is no intent to publish this to PyPI.
+
 ## Structure
 
 ```
 FunctionalCurves/
-├── pyproject.toml                 # Package metadata & dependencies (pip install -e .)
-├── functionalcurves/               # Installable package
+├── pyproject.toml                 # Local dependency/test config (editable install only)
+├── functionalcurves/               # Core research code, importable locally
 │   ├── __init__.py
 │   ├── mixing_models.py            # Simulate mixing (weakly dependent) bivariate processes
 │   └── depth.py                    # Compute Tukey depth / minimal direction, empirically and analytically
@@ -59,13 +61,9 @@ Standalone scratch script unrelated to the depth machinery: plots the empirical 
 
 `numpy`, `scipy`, `matplotlib`, `statsmodels` (for `VARProcess`), `tqdm`. A commented-out import suggests intended (but currently unused/unavailable) integration with a `depth` package (`depth.multivariate`) for halfspace depth via compiled libraries.
 
-## Installation
+## Local setup
 
-```bash
-pip install -e .
-```
-
-For running the test suite, install the dev extra instead:
+This is not published anywhere; install it locally in editable mode to make `functionalcurves` importable and run the tests:
 
 ```bash
 pip install -e ".[dev]"

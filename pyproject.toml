@@ -1,7 +1,7 @@
 [project]
 name = "functionalcurves"
 version = "0.1.0"
-description = "Simulating dependent (mixing) time series and estimating Tukey's halfspace depth"
+description = "Research code for simulating dependent (mixing) time series and estimating Tukey's halfspace depth (not published as a package)"
 requires-python = ">=3.9"
 dependencies = [
     "numpy",
