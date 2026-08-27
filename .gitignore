@@ -14,3 +14,6 @@ env/
 *.egg
 wheels/
 .eggs/
+
+# Local Claude Code agent config (not meant to be shared/committed)
+.claude/
