@@ -83,3 +83,7 @@ pytest
 ## Usage
 
 Both `functionalcurves/mixing_models.py` and `functionalcurves/depth.py` are runnable as scripts (`python -m functionalcurves.depth`, `python -m functionalcurves.mixing_models`) and contain end-to-end examples: simulate a process, estimate depth/direction over growing sample sizes, and plot convergence against the true/analytic values. The notebooks in `notebooks/` walk through the same workflow interactively.
+
+---
+
+_Last reviewed: 2026-08-31._
